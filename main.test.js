@@ -34,7 +34,7 @@ describe("Testing main.js", function () {
       expect(error.message).toBe("Expected number instead of string");
     }
 
-    expect(add(b, b)).not.toThrow();
+    expect(add(b, b)).toBe(b * 2);
   });
 
   it("Should return a Hello string", function () {
