@@ -25,3 +25,12 @@ jobs:
       - name: test_app
         run: |
           yarn test
+
+  post_build:
+    runs-on: ubuntu-latest
+    container: node:16-alpine
+    needs: build
+    steps:
+      - name: fake_step
+        run: |
+          echo "Added this fake step to test job-dependencies"
