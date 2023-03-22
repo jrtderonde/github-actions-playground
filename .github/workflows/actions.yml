@@ -15,16 +15,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: install_deps
-        needs: checkout
         run: |
           yarn install
 
       - name: build_app
-        needs: install_deps
         run: |
           yarn build
 
       - name: test_app
-        needs: build_app
         run: |
           yarn test
