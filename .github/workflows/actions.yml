@@ -1,0 +1,30 @@
+name: Jim's app
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:16-alpine
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install_deps
+        needs: checkout
+        run: |
+          yarn install
+
+      - name: build_app
+        needs: install_deps
+        run: |
+          yarn build
+
+      - name: test_app
+        needs: build_app
+        run: |
+          yarn test

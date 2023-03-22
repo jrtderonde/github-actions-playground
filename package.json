@@ -1,0 +1,24 @@
+{
+  "name": "github-actions-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "echo \"Fake build ... success!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrtderonde/github-actions-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrtderonde/github-actions-playground/issues"
+  },
+  "homepage": "https://github.com/jrtderonde/github-actions-playground#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
